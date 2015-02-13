@@ -41,7 +41,7 @@ set encoding=utf-8
 
 set cursorline         " Highlight current line
 set number             " add line number for current line
-set relativenumber     " turns on relative line numbering
+"set relativenumber     " turns on relative line numbering
 set title              " Show filename in titlebar
 set showcmd            " Show what command I'm typing
 set scrolloff=3        " Show me where I'm going
@@ -65,13 +65,24 @@ set splitright
 set ttyfast
 set lazyredraw
 set clipboard=unnamed  " Copy/paste like normal
+set mouse=a            " Enable mouse scrolling
 
-set undodir=~/.vim/undo
-set undofile
+" Highlight column 80 if vim >= 7.3
+if exists('+colorcolumn')
+  set colorcolumn=80
+" Highlight chacters that go past column 80 on old versions
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+if has("undofile")
+  set undodir=~/.vim/undo
+  set undofile
+endif
 
 set backup                 " keep a backup file
-set backupdir=/private/tmp " put it here
-set dir=/private/tmp       " put swap files here
+set backupdir=~/.private/tmp " put it here
+set dir=~/.private/tmp       " put swap files here
 
 " behave yourself
 nnoremap Y y$
