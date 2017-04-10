@@ -12,7 +12,10 @@ fi
 
 source ~/.bash_colors
 # Terminal prompt
-PS1="\[$BGreen\]\u@\h: \[$BBlue\]\W\[$BPurple\]\$( __git_ps1)\[$BWhite\] \$ \[$White\]"
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="verbose"
+PROMPT_COMMAND='__git_ps1 "\[$BGreen\]\W" " \[$White\]\\\$ " " [\[$BPurple\]%s\[$BGreen\]]"'
 
 # Run aliases file
 source ~/.aliases
