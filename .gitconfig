@@ -1,0 +1,42 @@
+[user]
+	name = Michael Crawford
+	email =
+[alias]
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|main\\|dev\\|develop' | xargs -n 1 git branch -d"
+	log-graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -n 15
+	stash-history = "!git log --oneline --grep=WIP $(git fsck --no-reflog | awk '/dangling commit/ { print $3 }')"
+[branch]
+	sort = -committerdate
+[core]
+    editor = vim
+[diff]
+	algorithm = histogram
+	tool = vscode
+[difftool]
+	prompt = true
+    keepBackup = false
+[difftool "vscode"]
+    cmd = code --wait --new-window --diff $LOCAL $REMOTE
+[difftool "vsdiffmerge"]
+	cmd = \"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	trustExitCode = true
+[merge]
+	tool = vscode
+	conflictstyle = zdiff3
+[mergetool]
+	prompt = true
+    keepBackup = false
+[mergetool "vscode"]
+    cmd = code --wait --new-window $MERGED
+[mergetool "vsdiffmerge"]
+	cmd = \"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	trustExitCode = true
+[push]
+	default = current
+	followTags = true
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[sequence]
+	editor = code --wait
