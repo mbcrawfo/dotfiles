@@ -1,0 +1,11 @@
+awscli
+cloc
+FiraCode
+git
+git.install
+git-sizer
+nuget.commandline
+nvm
+nvm.install
+terraform
+yarn
