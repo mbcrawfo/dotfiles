@@ -11,10 +11,12 @@
     editor = vim
 [diff]
 	algorithm = histogram
-	tool = vscode
+	tool = difftastic
 [difftool]
-	prompt = true
+	prompt = false
     keepBackup = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
 [difftool "vscode"]
     cmd = code --wait --new-window --diff $LOCAL $REMOTE
 [difftool "vsdiffmerge"]
@@ -31,6 +33,8 @@
 [mergetool "vsdiffmerge"]
 	cmd = \"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
 	trustExitCode = true
+[pager]
+	difftool = true
 [push]
 	default = current
 	followTags = true

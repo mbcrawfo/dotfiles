@@ -1,5 +1,6 @@
 awscli
 cloc
+difftastic
 FiraCode
 git
 git.install
