@@ -2,6 +2,7 @@ awscli
 cloc
 difftastic
 FiraCode
+fzf
 git
 git.install
 git-sizer
@@ -10,3 +11,4 @@ nvm
 nvm.install
 terraform
 yarn
+zoxide

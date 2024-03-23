@@ -31,6 +31,8 @@ HISTCONTROL=ignoredups
 # Allow "sharing" of history between instances
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
 
+eval "$(zoxide init bash)"
+
 export EDITOR='vim'
 export VISUAL='vim'
 

@@ -1,3 +1,2 @@
 alias ls='ls -lh --color'
 alias msbuild='MSBuild.exe'
-alias ps='powershell -File'
