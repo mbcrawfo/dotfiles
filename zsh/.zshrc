@@ -12,8 +12,8 @@ plugins=(
     nvm
     thefuck
     zoxide
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    zsh-autosuggestions # Install from github repo
+    zsh-syntax-highlighting # Install from github repo
 )
 
 zstyle ':omz:plugins:nvm' lazy yes
