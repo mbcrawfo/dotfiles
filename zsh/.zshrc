@@ -10,6 +10,7 @@ plugins=(
     git-prompt
     npm
     nvm
+    pyenv
     thefuck
     zoxide
     zsh-autosuggestions # Install from github repo

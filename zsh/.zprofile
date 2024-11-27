@@ -1,11 +1,12 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PATH:$PYENV_ROOT/bin"
+eval "$(pyenv init --path)"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/michael/Library/Application Support/JetBrains/Toolbox/scripts"
-
-export PATH="$PATH:/opt/homebrew/opt/python@3.13/libexec/bin"
 
 
 # Added by OrbStack: command-line tools and integration
