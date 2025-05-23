@@ -26,3 +26,4 @@ font-fira-code
 middleclick
 orbstack
 visual-studio-code
+atuin
