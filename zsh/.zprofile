@@ -1,3 +1,6 @@
+export COMPOSE_PARALLEL_LIMIT=1
+export LESS="--no-init --quit-if-one-screen -R"
+export PATH="$PATH:$HOME/bin"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
