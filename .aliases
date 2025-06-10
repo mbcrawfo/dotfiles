@@ -1,3 +1,3 @@
-alias brewup='brew update && brew upgrade && brew upgrade --cask'
+alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup && say "Homebrew upgrade complete"'
 alias ls='ls -lh --color'
 alias msbuild='MSBuild.exe'
