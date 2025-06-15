@@ -27,3 +27,5 @@ middleclick
 orbstack
 visual-studio-code
 atuin
+mkcert
+nss
