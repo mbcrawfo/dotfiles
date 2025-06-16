@@ -1,3 +1,7 @@
+if [ "$INTELLIJ_ENVIRONMENT_READER" ]; then
+    export HOMEBREW_NO_AUTO_UPDATE=1
+fi
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Environment variables

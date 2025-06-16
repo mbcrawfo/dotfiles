@@ -19,6 +19,11 @@ plugins=(
 
 zstyle ':omz:plugins:nvm' lazy yes
 
+# Automatic updates interfere with Jetbrains IDEs reading the environment
+if [ "$INTELLIJ_ENVIRONMENT_READER" ]; then
+    zstyle ':omz:update' mode disabled
+fi
+
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
