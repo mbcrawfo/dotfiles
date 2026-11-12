@@ -5,14 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if test -d /c/ProgramData/nvm; then
-  PATH=$PATH:/c/ProgramData/nvm
-fi
-
-if test -d "/c/Program Files/nodejs"; then
-  PATH=$PATH:"/c/Program Files/nodejs"
-fi
-
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
 source ~/.bash_colors
@@ -32,7 +24,4 @@ HISTCONTROL=ignoredups
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
 
 eval "$(zoxide init bash)"
-
-export EDITOR='vim'
-export VISUAL='vim'
 

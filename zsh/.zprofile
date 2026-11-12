@@ -1,15 +1,18 @@
+# Homebrew updates interfere with Jetbrains IDEs reading the environment
 if [ "$INTELLIJ_ENVIRONMENT_READER" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Environment variables
 export EDITOR='vim'
 export VISUAL='vim'
 export COMPOSE_PARALLEL_LIMIT=1
 export LESS="--no-init --quit-if-one-screen -R"
-export PATH="$PATH:$HOME/bin"
+
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.dotnet/tools"
+#export PATH=$PATH:"$(brew --prefix sqlite)/bin"
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
 export PYENV_ROOT="$HOME/.pyenv"

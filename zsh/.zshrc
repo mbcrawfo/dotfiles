@@ -11,7 +11,6 @@ plugins=(
     npm
     nvm
     pyenv
-    thefuck
     zoxide
     zsh-autosuggestions # Install from github repo
     zsh-syntax-highlighting # Install from github repo
